@@ -1,0 +1,199 @@
+/* General Styles */
+.app-container {
+    padding-top: 70px; /* Add padding to account for the fixed navbar */
+    min-height: 100vh;
+    background: #eaddf1;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    line-height: 1.7;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('https://mlorhcvp0qiu.i.optimole.com/w:1440/h:1080/q:mauto/f:best/https://blog.playota.app/wp-content/uploads/2024/01/highest-odi-score-by-a-team.png');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-section.visible {
+    transform: translateY(0);
+}
+
+.hero-section.hidden {
+    transform: translateY(-100%);
+}
+
+.hero-content {
+    background: rgba(99, 69, 126, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    animation: slideIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero-text {
+    font-size: 3rem;
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: 20px;
+    animation: fadeIn 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero-search-container {
+    animation: fadeIn 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero-search {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Budget Display */
+.budget-display {
+    text-align: center;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in;
+}
+
+.budget-card {
+    background: linear-gradient(135deg, #67437a, #3c40ad);
+    border-radius: 15px;
+    padding: 20px;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.budget-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.budget-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: bounce 2s infinite;
+}
+
+.budget-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #FFFFFF;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Player Cards */
+.player-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.player-card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.card {
+    border: 1px solid #530576;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f4f0f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(66, 68, 112, 0.3);
+}
+
+.player-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #424470;
+    margin: 10px auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.player-image:hover {
+    transform: scale(1.1);
+}
+
+.player-details {
+    text-align: center;
+    padding: 10px;
+}
+
+.player-details h3 {
+    color: #0e0e0e;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.player-details p {
+    color: #25262f;
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    background-color: #424470;
+    border-color: #424470;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #5A5C8A;
+    border-color: #5A5C8A;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes animate-pop-in {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
