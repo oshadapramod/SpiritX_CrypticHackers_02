@@ -74,7 +74,6 @@ Spirit11 is an exciting fantasy cricket platform for the Inter-University Cricke
 ## Usage
 
 - Users can sign up and create their fantasy teams.
-- Admins can manage player data and statistics.
 - Spiriter chatbot assists users with player selection and insights.
 
 ## Contribution
